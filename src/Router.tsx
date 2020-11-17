@@ -4,6 +4,7 @@ import AttendanceCode from "./Pages/AttendanceCode";
 import Blackboard from "./Pages/Blackboard";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import NewMeeting from "./Pages/NewMeeting";
 
 function Router() {
   return (
@@ -15,6 +16,9 @@ function Router() {
           </Route>
           <Route path="/blackboard">
             <Blackboard />
+          </Route>
+          <Route path="/new-meeting">
+            <NewMeeting />
           </Route>
           <Route path="/code">
             <AttendanceCode />

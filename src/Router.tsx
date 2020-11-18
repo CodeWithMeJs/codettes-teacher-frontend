@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./Components/NavBar";
+import Assignments from "./Pages/Assigments";
 import AttendanceCode from "./Pages/AttendanceCode";
 import Blackboard from "./Pages/Blackboard";
 import Home from "./Pages/Home";
@@ -11,9 +13,18 @@ function Router() {
   return (
     <div>
       <BrowserRouter>
+        {(window.location.pathname.split("/")[1] === "home" ||
+          window.location.pathname.split("/")[1] === "blackboard" ||
+          window.location.pathname.split("/")[1] === "assignments" ||
+          window.location.pathname.split("/")[1] === "attendance") && (
+          <Navbar />
+        )}
         <Switch>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/assignments">
+            <Assignments />
           </Route>
           <Route path="/blackboard">
             <Blackboard />

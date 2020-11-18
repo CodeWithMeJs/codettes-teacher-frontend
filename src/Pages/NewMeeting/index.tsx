@@ -1,14 +1,14 @@
-import Axios from "axios";
 import React, { useState } from "react";
+import api from "../../config/api";
 import styles from "./index.module.css";
 
 function NewMeeting() {
   const [state, setState] = useState({
+    topic: "",
     code: "",
   });
-  //   const [redirect, setRedirect] = useState(false);
 
-  const { code } = state;
+  const { code, topic } = state;
 
   const handleChange = (name: string) => (event: any) => {
     setState({ ...state, [name]: event.target.value });
@@ -18,8 +18,9 @@ function NewMeeting() {
     e.preventDefault();
     console.log(code);
 
-    if (code) {
-      Axios.post("http://localhost:5000/api", { code })
+    if (code && topic) {
+      api
+        .post("/", { code, topic })
         .then((resp) => {
           console.log(resp);
           window.close();
@@ -37,6 +38,13 @@ function NewMeeting() {
         Host Meeting
       </a>
       <form className={styles.signupForm} onSubmit={submit}>
+        <label>Topic</label>
+        <input
+          type="text"
+          placeholder="Topic"
+          value={topic}
+          onChange={handleChange("topic")}
+        />
         <label>Meeting Link</label>
         <input
           type="text"

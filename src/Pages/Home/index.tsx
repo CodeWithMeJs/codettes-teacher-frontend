@@ -1,4 +1,5 @@
 import React from "react";
+import PastMeetings from "../../Components/PastMeetings";
 import styles from "./index.module.css";
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
     <div className={styles.main}>
       <h1>Welcome To Home</h1>
       <button onClick={openNewMeetingWindow}>New Meeting</button>
+      <PastMeetings />
     </div>
   );
 }

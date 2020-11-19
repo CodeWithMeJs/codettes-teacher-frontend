@@ -5,7 +5,9 @@ import styles from "./index.module.css";
 import { v4 as uuidv4 } from "uuid";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socketString: string =
+  process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+const socket = io(socketString);
 
 function Blackboard() {
   const [state, setState] = useState({

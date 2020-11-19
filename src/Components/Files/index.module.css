@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main a {
+  color: white;
+}
+
+.main img {
+  cursor: pointer;
+}
+
+.main span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  background-color: #0e71eb;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.checkBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

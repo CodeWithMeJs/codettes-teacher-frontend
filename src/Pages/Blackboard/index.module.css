@@ -1,0 +1,28 @@
+.controls {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  padding: 10px;
+}
+
+.controls img {
+  height: 40px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.settings {
+  transition: ease-in-out 0.5s;
+  position: absolute;
+  z-index: 11;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  right: 10px;
+  top: 70px;
+}
+
+.settings div {
+  padding: 10px;
+  cursor: pointer;
+}

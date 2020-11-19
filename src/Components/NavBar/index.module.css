@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 6px 6px -6px #bdbdbd;
+  padding-bottom: 5px;
+}
+
+.main img {
+  height: 20px;
+  margin-left: 5px;
+}
+
+.main a {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}

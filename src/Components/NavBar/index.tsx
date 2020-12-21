@@ -9,7 +9,7 @@ function Navbar() {
       <span>
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/assignments">Assignments</NavLink>
-        <NavLink to="/blackboard">Blackboard</NavLink>
+        <NavLink to="/blackboard">Whiteboard</NavLink>
         <NavLink to="/attendance">Attendance</NavLink>
       </span>
 

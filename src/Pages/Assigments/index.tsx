@@ -9,8 +9,8 @@ function Assignments() {
       <div>
         <h2>1. Swapnadeep Mohapatra</h2>
         <Files />
-        <h2>2. Someone Else</h2>
-        <Files />
+        <h2>2. Tamojit Bera</h2>
+        {/* <Files /> */}
       </div>
     </div>
   );

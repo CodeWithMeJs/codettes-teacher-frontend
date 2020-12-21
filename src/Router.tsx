@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import NewMeeting from "./Pages/NewMeeting";
 import Participants from "./Pages/Participants";
+import NewAccount from "./Pages/NewAccount";
 
 function Router() {
   return (
@@ -31,6 +32,9 @@ function Router() {
           </Route>
           <Route path="/new-meeting">
             <NewMeeting />
+          </Route>
+          <Route path="/new-account">
+            <NewAccount />
           </Route>
           <Route path="/attendance">
             <Participants />

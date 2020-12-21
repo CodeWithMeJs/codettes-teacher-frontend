@@ -17,6 +17,12 @@ function Login() {
     setState({ ...state, error: "", [name]: event.target.value });
   };
 
+  function openNewAccount() {
+    var strWindowFeatures =
+      "location=yes,height=700,width=500,scrollbars=yes,status=yes";
+    window.open("new-account", "_blank", strWindowFeatures);
+  }
+
   function performLogin() {
     if (
       name.toLocaleLowerCase() === "teacher" &&
@@ -55,6 +61,14 @@ function Login() {
         {error && <Error err={error} />}
         <button type="submit">LOGIN</button>
       </form>
+      <button
+        className={styles.newAcc}
+        onClick={() => {
+          openNewAccount();
+        }}
+      >
+        Create New Account for Student
+      </button>
       {redirect && <Redirect to="/home" />}
     </div>
   );
